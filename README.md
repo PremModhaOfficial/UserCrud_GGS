@@ -1,3 +1,41 @@
+
+# UserCrud React using TypeScript and react-router
+
+## how to run
+
+
+
+### npm
+
+```bash
+cd UserCrud/
+npm i
+npm run dev
+```
+
+
+### bun 
+
+```bash
+cd UserCrud/
+bun install
+bun dev
+```
+
+
+## Assumptions or Considerations
+
+- the reqres api doesnt actualy create and delete users
+- ony light theme is needed
+- your user doent need to be the parth of the users list
+
+
+
+
+
+
+
+# Default readme
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
