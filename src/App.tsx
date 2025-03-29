@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import AuthRoute from './components/AuthRoute';
 import { Login } from './components/Login';
 import { Logout } from './components/Logout';
+import { Register } from './components/Register';
 
 function App() {
     return (
@@ -13,8 +14,8 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Login />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/register' element={<Register />} />
                     <Route path='/logout' element={<Logout />} />
-                    <Route path='/register' element={<UserDetails />} />
                     <Route element={<AuthRoute />} >
                         <Route path='/users' element={<ListOfUsers />} />
                         <Route path='/users/:id' element={<UserDetails />} />
