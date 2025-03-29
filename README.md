@@ -25,9 +25,9 @@ bun dev
 
 ## Assumptions or Considerations
 
-- the reqres api doesnt actualy create and delete users
-- ony light theme is needed
-- your user doent need to be the parth of the users list
+- the ReqRes api doesn't actualy create and delete users.
+- only light theme is needed.
+- your user doesn't need to be the parth of the users list.
 
 
 
