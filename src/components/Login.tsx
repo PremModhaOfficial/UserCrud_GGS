@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate } from "react-router";
+import { Link, Navigate } from "react-router";
 import { ACCSESS_TOKEN } from "../env";
 import { api } from "../utils/api";
 
@@ -53,6 +53,13 @@ export const Login = () => {
                         required
                     />
                 </div>
+                <Link to={"/register"}>
+                    <button
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                    >
+                        Register
+                    </button>
+                </Link>
                 <button
                     type="submit"
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:shadow-outline"

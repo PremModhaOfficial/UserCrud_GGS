@@ -6,22 +6,25 @@ import { api } from "../utils/api";
 export const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [isRegisterd, setIsRegisterd] = useState(false);
 
     const handleregister = async () => {
         const responce = await api.post("/register", { email, password })
         try {
             const token = responce.data.token
+            const register_id = responce.data.id
             localStorage.setItem(ACCSESS_TOKEN, token)
+            alert(`new user created userid: ${register_id}`)
+
             // console.log(token)
-            setLoggedIn(true)
+            setIsRegisterd(true)
         } catch (err) {
             console.error(err)
         }
     };
-    if (loggedIn) {
+    if (isRegisterd) {
         return (
-            <Navigate to={"/users"} />
+            <Navigate to={"/login"} />
         )
     }
 
